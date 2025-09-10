@@ -5,17 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
   </head>
   <body>
     <header class="header">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo">Jubayar Ahamad</a>
 
       <nav class="navbar">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Skill</a>
-        <a href="#">Contact</a>
+        <a href="#" style="--i: 1" class="active">Home</a>
+        <a href="#" style="--i: 2">About</a>
+        <a href="#" style="--i: 3">Service</a>
+        <a href="#" style="--i: 4">Skill</a>
+        <a href="#" style="--i: 5">Project</a>
+        <a href="#" style="--i: 6">Contact</a>
       </nav>
     </header>
+
+    <section class="home">
+      <div class="home-content">
+        <h3>Hello, It's Me</h3>
+        <h1>Jubayar Ahamad</h1>
+        <h3>And I'm a <span class="text"></span></h3>
+        <p>
+          I'm a Full Stack MERN Developer with 2 years of experience building
+          scalable web applications. Skilled in React, Node.js, Express,
+          MongoDB, and comfortable with tools like Git/GitHub, Docker, AWS, and
+          VS Code.
+        </p>
+
+        <div class="home-soci">
+          <a href="#" style="--i: 7"><i class="bx bxl-linkedin"></i></a>
+          <a href="#" style="--i: 8"><i class="bx bxl-github"></i></a>
+          <a href="#" style="--i: 9"><i class="bx bxl-whatsapp"></i></a>
+          <a href="#" style="--i: 10"><i class="bx bxl-gmail"></i></a>
+        </div>
+
+        <a href="#" class="btn-more">More About Me</a>
+      </div>
+
+      <div class="profile-pic">
+        <img src="images/me.webp" alt="Jubayar Ahamad" />
+      </div>
+    </section>
+    <script src="main.js"></script>
   </body>
 </html>
