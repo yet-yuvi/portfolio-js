@@ -23,8 +23,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 10px;
-  background: transparent;
+  padding: 20px 5%;
+  background: #183244;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,10 +43,10 @@ body {
 }
 .logo {
   position: relative;
-  font-size: 25px;
+  font-size: 30px;
   text-decoration: none;
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   cursor: default;
   opacity: 0;
   animation: slideRight 0.5s ease forwards 0.1s;
@@ -75,7 +75,7 @@ body {
   animation-delay: calc(0.1s * var(--i));
 }
 .navbar a:hover {
-  color: #65b6f7;
+  color: #89d075;
 }
 .home {
   position: relative;
@@ -163,7 +163,6 @@ body {
   animation-delay: calc(0.05s * var(--i));
 }
 .home-soci a:hover {
-  transform: scale(1.1);
   background: #89d075;
   border: 3px solid #89d075;
   color: #fff;
@@ -195,7 +194,6 @@ body {
   animation: slideTop 0.5s ease forwards 0.3s;
 }
 .btn-more:hover {
-  transform: scale(1.01);
   background: #00695c;
   color: white;
   border: 2px solid #ffffff;
@@ -223,31 +221,31 @@ body {
 .profile-pic {
   position: relative;
   margin-top: 20px;
-  padding: 5px;
-  width: 450px;
+  padding: 1px;
+  width: 420px;
   height: 450px;
-  border-radius: 50%;
+  border-radius: 2%;
   overflow: hidden;
-  border: 2px solid transparent;
+
   display: flex;
   justify-content: center;
   background-color: transparent;
-  animation: rainbow-glow 4s ease infinite alternate;
+  transform: rotate(5deg);
   transition: all 0.3s ease;
 }
 .profile-pic img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
   object-fit: cover;
   position: relative;
   transition: all 0.3s ease;
   z-index: 2;
 }
 .profile-pic:hover {
-  transform: scale(1.1) translateX(20px);
-  border-radius: 100px;
+  transform: rotate(0) scale(1.03) translateX(20px);
+  border-radius: 10px;
+  animation: rainbow-glow 5s ease infinite alternate;
 }
 .profile-pic img:hover {
-  border-radius: 100px;
+  border-radius: 10px;
 }
