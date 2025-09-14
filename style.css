@@ -226,7 +226,6 @@ body {
   height: 450px;
   border-radius: 2%;
   overflow: hidden;
-
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -242,10 +241,106 @@ body {
   z-index: 2;
 }
 .profile-pic:hover {
-  transform: rotate(0) scale(1.03) translateX(20px);
+  transform: scale(1.03) translateX(20px);
   border-radius: 10px;
   animation: rainbow-glow 5s ease infinite alternate;
 }
 .profile-pic img:hover {
   border-radius: 10px;
+}
+.about {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  gap: 100px;
+}
+.profile-pic2 {
+  position: relative;
+  margin-top: 20px;
+  padding: 1px;
+  width: 320px;
+  height: 360px;
+  overflow: visible;
+  transform: rotate(-5deg);
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    #001510,
+    #003a2b,
+    #00695c,
+    #0f4c75,
+    #1b262c,
+    #2f4f4f
+  );
+  background-size: 400% 400%;
+  background-position: center;
+  transition: all 0.3s ease;
+}
+.profile-pic2 img {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.profile-pic2:hover {
+  transform: scale(1.1) translateX(20px);
+  border-radius: 10px;
+  animation: rainbow-glow 5s ease infinite alternate,
+    gradient-shift 10s ease infinite;
+}
+.profile-pic2 img:hover {
+  border-radius: 10px;
+}
+.about-text {
+  max-width: 700px;
+  transition: all 0.3s ease;
+}
+.about-text h2 {
+  font-size: 100px;
+  font-weight: 700;
+  opacity: 0;
+  animation: slideLeft 0.5s ease forwards;
+  /* animation-delay: calc(0.005s * var(--i)); */
+}
+.about-text h2 span {
+  display: inline-block;
+  color: #89d075;
+  opacity: 0;
+  animation: slideBottom1 0.5s ease forwards;
+  /* animation-delay: calc(0.005s * var(--i)); */
+}
+.about-text h3 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 15px 0 10px;
+  opacity: 0;
+  animation: slideRight 0.5s ease forwards 0.2s;
+}
+.about-text p {
+  color: #f87aff;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: slideRight 0.5s ease forwards 0.2s;
 }
