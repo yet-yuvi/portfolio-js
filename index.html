@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
+    <link rel="icon" href="/images/favi.ico" />
     <link rel="stylesheet" href="style.css" />
+
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
@@ -22,12 +24,17 @@
     <header class="header">
       <a href="#" class="logo">Jubayar Ahamad</a>
 
-      <nav class="navbar">
-        <a href="#home" style="--i: 1" class="active">Home</a>
+      <!-- Hamburger -->
+      <div class="hamburger" id="hamburger">
+        <i class="bx bx-menu"></i>
+      </div>
+
+      <nav class="navbar" id="navbar">
+        <a href="#home" style="--i: 1">Home</a>
         <a href="#about" style="--i: 2">About</a>
         <a href="#skills" style="--i: 3">Skill</a>
         <a href="#projects" style="--i: 4">Projects</a>
-        <a href="#" style="--i: 5">Contact</a>
+        <a href="#contact" style="--i: 5">Contact</a>
       </nav>
     </header>
 
@@ -305,6 +312,49 @@
               <a href="#" target="_blank" class="btn live-btn">Live Demo</a>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="contact-container">
+        <!-- Left side -->
+        <div class="contact-info">
+          <h1>Get in Touch</h1>
+          <h3>I'd like to hear from you!</h3>
+          <p>
+            If you have any inquiries or just want to say hi, please use the
+            contact form below.
+          </p>
+          <div class="info-item">
+            <strong>Email:<i class="bx bxl-gmail"></i></strong
+            ><a href="mailto:eng.jubayar@gmail.com">eng.jubayar@gmail.com</a>
+          </div>
+          <div class="info-item">
+            <strong>Phone:<i class="bx bxl-whatsapp"></i></strong>
+            <a href="https://wa.me/8801717039741">+8801717039741</a>
+          </div>
+        </div>
+
+        <!-- Right side: form -->
+        <div class="contact-form">
+          <form action="#" method="POST">
+            <input type="text" name="name" placeholder="Full Name" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject / Title"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="6"
+              required
+            ></textarea>
+            <button type="submit" class="btn submit-btn">Send Message</button>
+          </form>
         </div>
       </div>
     </section>

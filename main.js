@@ -40,3 +40,22 @@ navLinks.forEach((link) => {
 
 // Add scroll event
 window.addEventListener("scroll", updateActiveOnScroll);
+
+// Hamberger modal open/close
+document.addEventListener("DOMContentLoaded", () => {
+  const hamburger = document.getElementById("hamburger");
+  const navbar = document.getElementById("navbar");
+  const navLinks = navbar.querySelectorAll("a");
+
+  // Toggle menu
+  hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+  });
+
+  // Close menu when clicking a link
+  navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+      navbar.classList.remove("active");
+    });
+  });
+});

@@ -61,6 +61,19 @@ body {
     transform: translateY(0px);
   }
 }
+.navbar {
+  display: flex;
+  gap: 18px;
+}
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ededed;
+  z-index: 1001;
+}
+
 .navbar a {
   display: inline-block;
   position: relative;
@@ -355,6 +368,7 @@ body {
 .section {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   scroll-margin-top: 74px;
   width: 100%;
   min-height: 100vh;
@@ -363,7 +377,6 @@ body {
   width: 600px;
   height: 600px;
   padding: 20px 70px;
-  margin-left: 100px;
 }
 .heading1 {
   text-align: center;
@@ -372,6 +385,7 @@ body {
   text-underline-offset: 10px;
   margin-bottom: 40px;
   color: #89d075;
+  white-space: nowrap; /* prevents line breaks */
 }
 .bar {
   font-size: 16px;
@@ -706,13 +720,179 @@ body {
   background: #65b6f7;
 }
 
-/* Responsive for smaller screens */
-@media (max-width: 650px) {
-  .projects-container {
-    gap: 20px;
+/* Contact Section */
+.contact {
+  width: 100%;
+  min-height: 100vh;
+  padding: 60px 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ededed;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.contact-info {
+  flex: 1;
+  max-width: 450px;
+}
+
+.contact-info h1 {
+  font-size: 50px;
+  color: #89d075;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #65b6f7;
+}
+
+.contact-info p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.contact-info .info-item {
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-info .info-item strong {
+  color: #65b6f7;
+  min-width: 80px; /* keeps labels aligned */
+}
+
+.contact-info .info-item i {
+  font-size: 20px;
+  margin-left: 5px;
+  color: #89d075;
+}
+
+.contact-info .info-item a {
+  color: #ededed;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info .info-item a:hover {
+  color: #89d075;
+}
+
+/* Form */
+.contact-form {
+  flex: 1;
+  max-width: 500px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: #ddd6d6;
+  color: #000000;
+  resize: none;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #89d075;
+}
+
+.contact-form .submit-btn {
+  background: #89d075;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form .submit-btn:hover {
+  background: #65b6f7;
+  box-shadow: 0 0 10px 2px #89d075, 0 0 15px 5px #65b6f7;
+}
+
+/* Responsive fix for home and about sections */
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+    position: absolute;
+    top: 60px; /* under the header */
+    right: 20px;
+    flex-direction: column;
+    gap: 15px;
+    background: #0f3b70;
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   }
 
-  .project-card {
+  .navbar.active {
+    display: flex; /* show when active */
+  }
+
+  .hamburger {
+    display: block; /* show hamburger on mobile */
+  }
+
+  .navbar a {
+    font-size: 22px;
+    margin: 15px 0;
+  }
+  .home,
+  .about {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px; /* adds space between image and text */
+    padding: 80px 5% 20px;
+    height: auto; /* remove fixed 100vh so it grows naturally */
+  }
+
+  .home-content,
+  .about-text {
+    max-width: 100%;
+  }
+
+  .profile-pic,
+  .profile-pic2 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    transform: none; /* disable tilt on small screens */
+  }
+
+  .profile-pic img,
+  .profile-pic2 img {
     width: 100%;
+    height: auto;
+  }
+  .contact-container {
+    flex-direction: column;
+    gap: 40px;
   }
 }
